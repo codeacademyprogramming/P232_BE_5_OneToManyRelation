@@ -1,0 +1,23 @@
+﻿@model StudentViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Students</h1>
+
+<ul>
+    @foreach (var item in Model.Students)
+    {
+        <li>@item.FullName - @item.Email - @item.Point - @item.Group.No</li>
+    }
+</ul>
+
+<h1>Group</h1>
+
+<ul>
+    @foreach (var item in Model.Groups)
+    {
+        <li>@item.No - @item.Students.Count</li>
+    }
+</ul>
+
